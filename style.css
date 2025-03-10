@@ -1,0 +1,69 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Funnel Sans", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+#titlesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.post-container {
+  width: 80%;
+  border-radius: 5px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.post-container h2 {
+  margin-bottom: 10px;
+}
+
+.post-container p {
+  margin-bottom: 2%;
+}
+
+.data-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+}
+
+.data-container p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.data-container :nth-child(1) {
+  background-color: green;
+}
+
+.data-container :nth-child(2) {
+  background-color: rgb(128, 0, 0);
+}
+
+.data-container :nth-child(3) {
+  background-color: black;
+}
