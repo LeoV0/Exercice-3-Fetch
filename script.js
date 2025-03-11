@@ -1,6 +1,8 @@
 async function myFunction() {
   const promise = await fetch("https://dummyjson.com/posts");
   const data = await promise.json();
+  console.log(data);
+  console.log(data.posts[0].tags);
   const productTitleContainer = document.querySelector("#titlesContainer");
 
   for (let i = 0; i < data.posts.length; i++) {
@@ -29,6 +31,10 @@ async function myFunction() {
     const viewNumbers = document.createElement("p");
     viewNumbers.innerHTML = `Views : ${data.posts[i].views}`;
     dataContainer.appendChild(viewNumbers);
+
+    const tag = document.createElement("p");
+    tag.innerHTML = `${data.posts[i].tags}`;
+    dataContainer.appendChild(tag);
 
     postContainer.appendChild(dataContainer);
     productTitleContainer.appendChild(postContainer);
